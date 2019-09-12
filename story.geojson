@@ -26,6 +26,58 @@
           40.43336571835535
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Three"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.35120582580566,
+          43.099831316514944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Four"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.9271194934845,
+          40.807207353534615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Five"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.62763738632202,
+          39.72063095305944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Six"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.60358333587646,
+          39.68760562358051
+        ]
+      }
     }
   ]
 }
