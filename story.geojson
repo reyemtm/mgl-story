@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Athens"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.10116267204285,
+          39.32739287379205
+        ]
+      }
+    }
+  ]
+}
