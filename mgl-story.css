@@ -1,7 +1,17 @@
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+}
+
 .mgl-story {
-  width: 33%;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+  width: 30%;
   /* margin-left: calc(67% - 60px); */
-  padding: 10px;
   overflow: auto;
   overflow-x: hidden;
   background-color: #fff;
@@ -14,14 +24,51 @@
   z-index: 10;
 }
 .mgl-story > section {
-  margin: 40px 20px 500px 20px;
+  margin: 10px 20px 500px 20px;
+  padding-top: 20px;
 }
 
 
 .mgl-story > section {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .mgl-story > section.active {
   opacity: 1;
+}
+
+.mgl-story .story-body {
+  text-align: justify;
+}
+
+.mgl-story > section > button {
+  margin-top: 20px;
+  border: solid thin #121212;
+  background: transparent;
+  border-radius: 2px;
+  min-width: 60px;
+  display: none;
+}
+
+.mgl-story > section > button:hover,
+.mgl-story > section > button:focus {
+  background: #121212;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .mgl-story {
+    height: 40vh;
+    top: unset;
+    right: unset;
+    width: 100%
+  }
+  #map {
+    /* margin-bottom: 40vh; */
+    height: 60vh;
+    bottom: unset;
+  }
 }

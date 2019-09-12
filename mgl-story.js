@@ -27,66 +27,83 @@ function createStory(map, dataUrl, id) {
 
   function storyInit(geojson) {
 
+    map.flyTo({
+      center: geojson.features[0].geometry.coordinates,
+      zoom: 13.6
+    })
+
     var chapters = [];
     geojson.features.map(function (feature) {
       // add check if geojson is polygon or point
       // var center = turf.center(feature);
       var p = feature.properties;
-      var info = (p.INFO != null) ? p.INFO : "";
+      var story = p.story;
+
       chapters.push({
         title: p.title,
-        body: info,
+        body: story,
         center: feature.geometry.coordinates,
         bearing: (p.bearing != null) ? p.bearing : 0,
         pitch: (p.pitch != null) ? p.pitch : 0,
-        zoom: (p.zoom != null) ? p.zoom : 16,
+        zoom: (p.zoom != null) ? p.zoom : 13.6,
+        image: (!p.image) ? null : p.image,
         speed: 0.8
       });
     });
 
-    console.log(chapters)
+    // console.log(chapters)
+
     for (var i = 0; i < chapters.length; i++) {
       var next = i + 1;
       var prev = i - 1;
       if (i === (chapters.length - 1)) {
-        var next = 0;
+        next = 0;
       }
       if (i === 0) {
-        var prev = chapters.length - 1;
+        prev = chapters.length - 1;
       }
+
       createChapterList(id, chapters[i], i, next, prev);
 
-      var firstChapter = storyContainer.children[0];
-      firstChapter.classList.add('active')
       // storyContainer.setAttribute('style','height:' + (firstChapter.clientHeight) + "px");
 
       storyContainer.onscroll = function () {
         for (var i = 0; i < chapters.length; i++) {
           var chapterName = "chapter" + i;
+          console.log(chapterName)
           if (isElementOnScreen(chapterName)) {
+            console.log("active", chapterName)
             setActiveChapter(chapterName, i);
             break;
           }
         }
       };
+      if (i === chapters.length - 1) {
+        storyContainer.lastChild.style.marginBottom = (story.clientHeight - storyContainer.lastChild.scrollHeight) + "px"
+      }
     }
 
-    /*
-    helper functions
-    */
-
-    function createChapterList(div, p, id, next, prev) {
+    function createChapterList(div, p, index, next, prev) {
       var chapter = document.createElement('section');
-      chapter.id = "chapter" + id;
+      chapter.id = "chapter" + index;
       chapter.classList.add("chapter");
-      var title = document.createElement('h3');
+      if (index === 0) {
+        chapter.classList.add("active")
+      }
+      var title = document.createElement('h2');
       title.textContent = p.title;
       title.classList.add('story-title');
       var body = document.createElement('div');
       body.classList.add('story-body');
-      body.innerHTML = p.body;
-      var nextlink = document.createElement('a');
-      nextlink.href = "#chapter" + next;
+      body.innerText = p.body;
+
+      var nextlink = document.createElement('button');
+      nextlink.onclick = function() {
+        window.location.hash = "#chapter" + next;
+        if (isElementOnScreen("chapter" + next)) {
+          setActiveChapter("chapter" + next);
+        }
+      }
       nextlink.textContent = ">";
       nextlink.classList.add("btn");
       nextlink.classList.add("btn-secondary");
@@ -94,20 +111,36 @@ function createStory(map, dataUrl, id) {
 
       if (prev != null) {
         nextlink.style.float = "right";
-        var prevlink = document.createElement('a');
+        var prevlink = document.createElement('button');
+        prevlink.onclick = function() {
+          window.location.hash = "#chapter" + prev;
+          if (isElementOnScreen("chapter" + prev)) {
+            setActiveChapter("chapter" + prev);
+          }
+        }
         prevlink.classList.add("btn");
         prevlink.classList.add("btn-secondary");
         prevlink.setAttribute("data-scroll", "");
-        prevlink.href = "#chapter" + prev;
         prevlink.textContent = "<";
       }
 
       chapter.appendChild(title);
       chapter.appendChild(body);
+      var imgSource = (!p.image) ? null : p.image;
+
+      if (imgSource) {
+        var img = document.createElement("img");
+        img.src = imgSource;
+        img.style.width = "100%";
+        img.style.marginTop = "20px";
+        chapter.appendChild(img)
+      }
+      
       if (prev != null) {
         chapter.appendChild(prevlink);
       }
       chapter.appendChild(nextlink);
+
       var div = document.getElementById(div);
       div.appendChild(chapter)
     }
@@ -142,9 +175,17 @@ function createStory(map, dataUrl, id) {
     }
 
     function isElementOnScreen(id) {
+      var boolean = false;
       var element = document.getElementById(id);
       var bounds = element.getBoundingClientRect();
-      return bounds.top < window.innerHeight && bounds.bottom > 20;
+      var storyBounds = story.getBoundingClientRect();
+      if (window.innerWidth < 961) {
+        boolean = bounds.top > storyBounds.top && bounds.bottom < storyBounds.bottom; 
+      }else{
+        boolean = bounds.top < window.innerHeight && bounds.bottom > 0;
+      }
+      console.log("t:", bounds.top, "b:", bounds.bottom, "h:", storyBounds)
+      return boolean
     }
   }
 
