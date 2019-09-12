@@ -82,7 +82,7 @@
       "properties": {
         "title": "Madison",
         "image": ["madison.jpg"],
-        "story": "So one cold winter's day in January set out for the cheese state in a large Penske truck carrying 1980 300D diesel Mercedes, converted to vegetable oil of course. At first the drive was harrowing, descending down mountain roads, but they eventually reached their destination, and in one piece. They made new friends, got a dog, and life was pretty good. Then they got married."
+        "story": "So one cold winter's day in January set out for the cheese state in a large Penske truck trailering a 1980 300D diesel Mercedes, converted to vegetable oil of course. At first the drive was harrowing, descending down mountain roads, but they eventually reached their destination, and in one piece. They made new friends, got a dog, and life was pretty good. Then they got married."
       },
       "geometry": {
         "type": "Point",
@@ -97,7 +97,7 @@
       "properties": {
         "title": "The Wedding",
         "image": ["thewedding.jpg"],
-        "story": "They planned the wedding which was in Ohio, two states away. All in all it was a success. There is plenty of food, tons of family and good times with old friends. It was a day to remember...although that might also be because nine months later they were having their first baby. Eleanor Fallon Meyer was born at the local hospital in Madison on June 12th, 2010. She was the first of three girls...but I am getting ahead of myself. Alas, their time in Madison was short-lived and they had to move, so two weeks after baby Ellie was born they packed up again and made the trek back to Ohio, baby, dog and canoe in tow."
+        "story": "They planned the wedding which was in Ohio, two states away, from their aparment in Madison. All in all it was a huge success. There was plenty of food, tons of family, and good times with old friends. It was a day to remember...although that might also be because nine months later they were having their first baby. Eleanor Fallon Meyer was born at the local hospital in Madison on June 12th, 2010. She was the first of three girls...but I am getting ahead of myself. Alas, their time in Madison was short-lived and they had to move, so two weeks after baby Ellie was born they packed up again and made the trek back to Ohio, baby, dog and canoe in tow."
       },
       "geometry": {
         "type": "Point",
@@ -112,7 +112,7 @@
       "properties": {
         "title": "Wooster",
         "image": ["wooster.jpg"],
-        "story": "Wooster was the beginning of what would become an illustrious career in GIS for him, and Wooster had its perks. The little bakery that served scrumptious breakfast sandwiches and homemade pizza was a favorite. But as it turns out trying to establish a career in the late 2000s was a bit tricky, so they had to move yet again."
+        "story": "Wooster was the start of what would become an illustrious career in GIS for him, and Wooster had its perks. The little bakery that served scrumptious breakfast sandwiches and homemade pizza was a favorite. But as it turns out trying to establish a career in the late 2000s was a bit tricky, so after a little over a year they had to move yet again."
       },
       "geometry": {
         "type": "Point",
