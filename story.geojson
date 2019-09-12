@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Athens"
+        "title": "One"
       },
       "geometry": {
         "type": "Point",
@@ -17,7 +17,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Pittsburgh"
+        "title": "Two"
       },
       "geometry": {
         "type": "Point",
