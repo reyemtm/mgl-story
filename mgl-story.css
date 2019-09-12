@@ -70,5 +70,6 @@
     /* margin-bottom: 40vh; */
     height: 60vh;
     bottom: unset;
+    width: 100%;
   }
 }

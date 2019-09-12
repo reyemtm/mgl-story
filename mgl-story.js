@@ -129,11 +129,13 @@ function createStory(map, dataUrl, id) {
       var imgSource = (!p.image) ? null : p.image;
 
       if (imgSource) {
-        var img = document.createElement("img");
-        img.src = imgSource;
-        img.style.width = "100%";
-        img.style.marginTop = "20px";
-        chapter.appendChild(img)
+        imgSource.map(function(url) {
+          var img = document.createElement("img");
+          img.src = url;
+          img.style.width = "100%";
+          img.style.marginTop = "20px";
+          chapter.appendChild(img)
+        })
       }
       
       if (prev != null) {
@@ -180,7 +182,7 @@ function createStory(map, dataUrl, id) {
       var bounds = element.getBoundingClientRect();
       var storyBounds = story.getBoundingClientRect();
       if (window.innerWidth < 961) {
-        boolean = bounds.top > storyBounds.top && bounds.bottom < storyBounds.bottom; 
+        boolean = bounds.bottom > storyBounds.top; 
       }else{
         boolean = bounds.top < window.innerHeight && bounds.bottom > 0;
       }
