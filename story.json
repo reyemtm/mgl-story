@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "title": "Intro",
-        "story": "It all started near the banks of a small river called the Hocking. Some say it was love at first sight, others may disagree, but what started out in a dimly lit bar on a late night in Athens, Ohio turned into 10 years and counting and amazing and life together. This is their story."
+        "story": "It all started near the banks of a small river called the Hocking. Some say it was love at first sight, others may disagree, but what started out in a dimly lit bar on a late night in Athens, Ohio has turned into 10 years and counting of an amazing and life together. This is their story."
       },
       "geometry": {
         "type": "Point",
@@ -81,6 +81,7 @@
       "type": "Feature",
       "properties": {
         "title": "Madison",
+        "image": "madison.jpg",
         "story": "So one cold winter's day in January set out for the cheese state in a large Penske truck carrying 1980 300D diesel Mercedes, converted to vegetable oil of course. At first the drive was harrowing, descending down mountain roads, but they eventually reached their destination, and in one piece. They made new friends, got a dog, and life was pretty good. Then they got married."
       },
       "geometry": {
@@ -95,6 +96,7 @@
       "type": "Feature",
       "properties": {
         "title": "The Wedding",
+        "image": "thewedding.jpg",
         "story": "They planned the wedding which was in Ohio, two states away. All in all it was a success. There is plenty of food, tons of family and good times with old friends. It was a day to remember...although that might also be because nine months later they were having their first baby. Eleanor Fallon Meyer was born at the local hospital in Madison on June 12th, 2010. She was the first of three girls...but I am getting ahead of myself. Alas, their time in Madison was short-lived and they had to move, so two weeks after baby Ellie was born they packed up again and made the trek back to Ohio, baby, dog and canoe in tow."
       },
       "geometry": {
@@ -109,6 +111,7 @@
       "type": "Feature",
       "properties": {
         "title": "Wooster",
+        "image": "wooster.jpg",
         "story": "Wooster was the beginning of what would become an illustrious career in GIS for him, and Wooster had its perks. The little bakery that served scrumptious breakfast sandwiches and homemade pizza was a favorite. But as it turns out trying to establish a career in the late 2000s was a bit tricky, so they had to move yet again."
       },
       "geometry": {
@@ -123,6 +126,7 @@
       "type": "Feature",
       "properties": {
         "title": "Lancaster",
+        "image": "43130.jpg",
         "story":"So they packed up their belongings, baby Ellie, the dog, the canoe, and headed for Lancaster, Ohio. Here they rented a small house, only slightly larger then the tiny home they had lived in and Wooster. Again life was good. They were not rich by any sense of the word, but they had enough to get by and even occasionally go out on a date. After a few years they decided one beautiful girl just wan't enough, and so in spring 2013 baby Clara Sage Meyer was born. And with the new baby the small house would no longer suffice, so again, when the baby was two weeks old, they moved into their first real house together."
       },
       "geometry": {
@@ -137,6 +141,7 @@
       "type": "Feature",
       "properties": {
         "title": "Home",
+        "image": "home.jpg",
         "story":"The new house had plenty of space for a large garden, a fenced-in yard for the dog and kids, and life was pretty good. Then came little Addy. Adelaide Rye Meyer was born on in the fall of 2016. From that first night hospital she never did like to sleep. Maybe when she grows up and has a house of her own she will sleep in her own bed, but to this day she wakes up next to mommy and daddy. And that is where this story ends, for now. Now we have skipped plenty of things such as vacations to the Delaware Shore, a babymoon to Florida, a beach vacation to Georgia, plenty of sleepovers and birthdays and parties with friends and many other of life's activities, but those are stories for another day."
       },
       "geometry": {
