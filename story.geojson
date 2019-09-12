@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "One"
+        "title": "One",
+        "story": "This is chapter one."
       },
       "geometry": {
         "type": "Point",
