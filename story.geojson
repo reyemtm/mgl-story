@@ -13,6 +13,19 @@
           39.32739287379205
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Pittsburgh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.89073544740677,
+          40.43336571835535
+        ]
+      }
     }
   ]
 }
