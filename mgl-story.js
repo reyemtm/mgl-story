@@ -46,7 +46,7 @@ function createStory(map, dataUrl, id) {
         bearing: (p.bearing != null) ? p.bearing : 0,
         pitch: (p.pitch != null) ? p.pitch : 0,
         zoom: (p.zoom != null) ? p.zoom : 13.6,
-        image: (!p.image) ? null : p.image,
+        images: (!p.images) ? null : p.images,
         speed: 0.8
       });
     });
@@ -126,7 +126,7 @@ function createStory(map, dataUrl, id) {
 
       chapter.appendChild(title);
       chapter.appendChild(body);
-      var imgSource = (!p.image) ? null : p.image;
+      var imgSource = (!p.images) ? null : p.images;
 
       if (imgSource) {
         imgSource.map(function(url) {

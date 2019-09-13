@@ -21,7 +21,7 @@
         "title": "They Meet",
         "story": "They met in a small coffee shop called 'Donkey'. She would get her cafe late seemingly daily, and he and his co-workers would talk about the cute girl that just came through the door.",
         "zoom": 18,
-        "image": ["donkeycoffee.jpg"]
+        "images": ["donkeycoffee.jpg"]
       },
       "geometry": {
         "type": "Point",
@@ -37,7 +37,7 @@
       "properties": {
         "title": "The Hike",
         "story": "Their first adventure together was to a little park called the Hocking Hills, and to a now abandoned trail that included two waterfalls and a gorgeous scenic overlook. She had this red Pontiac I believe and the road to the Hocking Hills was quite windy. About halfway there he asked if he could drive so he would not get sick on would turn out to be their first real date together. They enjoyed the scenery, enjoyed each other's company, and reveled in newfound love. The rest is history.",
-        "image": ["hhills.jpg"]
+        "images": ["hhills.jpg"]
       },
       "geometry": {
         "type": "Point",
@@ -53,7 +53,7 @@
         "title": "The Cabin",
         "story": "A year later was their first Christmas together. They spent many cold nights that winter snuggling up by the fire in their small cabin...with no running water. It was their first place together. Needless to say her parents were not impressed.",
         "zoom": 16,
-        "image": ["thecabin.jpg"]
+        "images": ["thecabin.jpg"]
       },
       "geometry": {
         "type": "Point",
@@ -67,7 +67,7 @@
       "properties": {
         "title": "Pittsburgh",
         "story": "After completing graduate school he decided to follow his new love as she went on to further her education at the University of Pittsburgh. After traversing the city they found a nice cute place to live near Regent Square. She studied while he picked apples, brewed coffee and gleaned crops from around the area for the Pittsburgh Food Bank. They enjoyed their time in the Steel City, but once she graduated it was time to move on.",
-        "image": ["pitt.jpg"]
+        "images": ["pitt.jpg"]
       },
       "geometry": {
         "type": "Point",
@@ -81,7 +81,7 @@
       "type": "Feature",
       "properties": {
         "title": "Madison",
-        "image": ["madison.jpg"],
+        "images": ["madison.jpg"],
         "story": "So one cold winter's day in January set out for the cheese state in a large Penske truck carrying 1980 300D diesel Mercedes, converted to vegetable oil of course. At first the drive was harrowing, descending down mountain roads, but they eventually reached their destination, and in one piece. They made new friends, got a dog, and life was pretty good. Then they got married."
       },
       "geometry": {
@@ -96,7 +96,7 @@
       "type": "Feature",
       "properties": {
         "title": "The Wedding",
-        "image": ["thewedding.jpg"],
+        "images": ["thewedding.jpg"],
         "story": "They planned the wedding which was in Ohio, two states away. All in all it was a success. There is plenty of food, tons of family and good times with old friends. It was a day to remember...although that might also be because nine months later they were having their first baby. Eleanor Fallon Meyer was born at the local hospital in Madison on June 12th, 2010. She was the first of three girls...but I am getting ahead of myself. Alas, their time in Madison was short-lived and they had to move, so two weeks after baby Ellie was born they packed up again and made the trek back to Ohio, baby, dog and canoe in tow."
       },
       "geometry": {
@@ -111,7 +111,7 @@
       "type": "Feature",
       "properties": {
         "title": "Wooster",
-        "image": ["wooster.jpg"],
+        "images": ["wooster.jpg"],
         "story": "Wooster was the beginning of what would become an illustrious career in GIS for him, and Wooster had its perks. The little bakery that served scrumptious breakfast sandwiches and homemade pizza was a favorite. But as it turns out trying to establish a career in the late 2000s was a bit tricky, so they had to move yet again."
       },
       "geometry": {
@@ -126,7 +126,7 @@
       "type": "Feature",
       "properties": {
         "title": "Lancaster",
-        "image": ["43130.jpg"],
+        "images": ["43130.jpg"],
         "story":"So they packed up their belongings, baby Ellie, the dog, the canoe, and headed for Lancaster, Ohio. Here they rented a small house, only slightly larger then the tiny home they had lived in and Wooster. Again life was good. They were not rich by any sense of the word, but they had enough to get by and even occasionally go out on a date. After a few years they decided one beautiful girl just wan't enough, and so in spring 2013 baby Clara Sage Meyer was born. And with the new baby the small house would no longer suffice, so again, when the baby was two weeks old, they moved into their first real house together."
       },
       "geometry": {
@@ -141,7 +141,7 @@
       "type": "Feature",
       "properties": {
         "title": "Home",
-        "image": ["home.jpg"],
+        "images": ["home.jpg"],
         "story":"The new house had plenty of space for a large garden, a fenced-in yard for the dog and kids, and life was pretty good. Then came little Addy. Adelaide Rye Meyer was born on in the fall of 2016. From that first night hospital she never did like to sleep. Maybe when she grows up and has a house of her own she will sleep in her own bed, but to this day she wakes up next to mommy and daddy. And that is where this story ends, for now. Now we have skipped plenty of things such as vacations to the Delaware Shore, a babymoon to Florida, a beach vacation to Georgia, plenty of sleepovers and birthdays and parties with friends and many other of life's activities, but those are stories for another day."
       },
       "geometry": {

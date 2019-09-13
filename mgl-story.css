@@ -24,13 +24,14 @@
   z-index: 10;
 }
 .mgl-story > section {
-  margin: 10px 20px 500px 20px;
-  padding-top: 20px;
+  margin: 10px 20px 400px 20px;
+  padding-top: 1px;
+  transition: opacity 0.3s ease-in;
 }
 
 
 .mgl-story > section {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .mgl-story > section.active {
@@ -57,7 +58,13 @@
   cursor: pointer;
 }
 
+.mgl-story {
+  scroll-snap-type: y proximity;
+}
 
+.mgl-story > section {
+  scroll-snap-align: start;
+}
 
 @media screen and (max-width: 960px) {
   .mgl-story {
