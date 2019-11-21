@@ -127,9 +127,12 @@ function createStory(map, dataUrl, id) {
       chapter.appendChild(title);
       chapter.appendChild(body);
       var imgSource = (!p.images) ? null : p.images;
+      console.log(imgSource)
 
       if (imgSource) {
+        console.log(imgSource)
         imgSource.map(function(url) {
+          console.log(url);
           var img = document.createElement("img");
           img.src = url;
           img.style.width = "100%";
