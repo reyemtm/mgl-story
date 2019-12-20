@@ -9,7 +9,7 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby', // stylesheet location
   center: [-82.10116, 39.32739], // starting position [lng, lat]
   zoom: 13.6, // starting zoom
-  hash: false
+  hash: true
 });
 
 var params = new URLSearchParams(window.location.search);
