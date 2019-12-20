@@ -14,7 +14,7 @@ var map = new mapboxgl.Map({
 
 var params = new URLSearchParams(window.location.search);
 
-var url = (!params) ? "./story.json") : params.get("story");
+var url = (!params) ? "./story.json" : (params && params.get("story")) ? params.get("story") : "./story.json";
 
 map.on("load", function() {
   createStory(this, url, "story")
