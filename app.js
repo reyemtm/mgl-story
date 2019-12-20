@@ -12,8 +12,12 @@ var map = new mapboxgl.Map({
   hash: false
 });
 
+var params = new URLSearchParams(window.location.search);
+
+var url = (!params) ? "./story.json") : params.get("story");
+
 map.on("load", function() {
-  createStory(this, "./story.json", "story")
+  createStory(this, url, "story")
 })
 
 map.on("click", function(e) {
