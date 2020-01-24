@@ -70,9 +70,9 @@ function createStory(map, dataUrl, id) {
       storyContainer.onscroll = function () {
         for (var i = 0; i < chapters.length; i++) {
           var chapterName = "chapter" + i;
-          console.log(chapterName)
+//           console.log(chapterName)
           if (isElementOnScreen(chapterName)) {
-            console.log("active", chapterName)
+//             console.log("active", chapterName)
             setActiveChapter(chapterName, i);
             break;
           }
