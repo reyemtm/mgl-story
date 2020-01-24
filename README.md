@@ -13,7 +13,7 @@ GeoJSON FeatureCollection Schema
       "type": "Feature",
       "properties": {
         "title": "This is a heading",
-        "story": "This is a story."
+        "story": "This is a story." //can use story or description for the field name
         "images": ["image1-link.jpg", "image2-link.jpg"]
       },
       "geometry": {
