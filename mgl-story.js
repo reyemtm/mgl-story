@@ -191,7 +191,7 @@ function createStory(map, dataUrl, id) {
       }else{
         boolean = bounds.top < window.innerHeight && bounds.bottom > 0;
       }
-      console.log("t:", bounds.top, "b:", bounds.bottom, "h:", storyBounds)
+//       console.log("t:", bounds.top, "b:", bounds.bottom, "h:", storyBounds)
       return boolean
     }
   }
