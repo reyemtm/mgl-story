@@ -15,7 +15,7 @@ var center = (!params.center) ? [-82.10116, 39.32739] : [Number(params.center.sp
 var map = new mapboxgl.Map({
   container: 'map', // container id
   style: 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby', // stylesheet location
-  center: [-82.10116, 39.32739], // starting position [lng, lat]
+  center: center, // starting position [lng, lat]
   zoom: 13.6, // starting zoom
   hash: true
 });
