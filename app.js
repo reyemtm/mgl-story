@@ -12,6 +12,8 @@ var style = (!params.style) ? 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby
 
 var center = (!params.center) ? [-82.10116, 39.32739] : [Number(params.center.split(",")[0]),Number(params.center.split(",")[1])];
 
+console.log(center, style, url)
+
 var map = new mapboxgl.Map({
   container: 'map', // container id
   style: 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby', // stylesheet location
