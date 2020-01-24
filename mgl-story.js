@@ -37,7 +37,7 @@ function createStory(map, dataUrl, id) {
       // add check if geojson is polygon or point
       // var center = turf.center(feature);
       var p = feature.properties;
-      var story = p.story;
+      var story = (!p.story) ? p.description : p.story;
 
       chapters.push({
         title: p.title,
