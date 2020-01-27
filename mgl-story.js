@@ -45,6 +45,10 @@ function createStory(map, dataUrl, id, theme, zoom) {
       var p = feature.properties;
       var story = (!p.story) ? p.description : p.story;
 
+      if (p.image) {
+        p["images"] = p.image
+      }
+
       chapters.push({
         title: p.title,
         body: story,
@@ -56,8 +60,6 @@ function createStory(map, dataUrl, id, theme, zoom) {
         speed: 0.8
       });
     });
-
-    // console.log(chapters)
 
     for (var i = 0; i < chapters.length; i++) {
       var next = i + 1;
@@ -112,7 +114,8 @@ function createStory(map, dataUrl, id, theme, zoom) {
       }
       nextlink.textContent = ">";
       nextlink.classList.add("btn");
-      nextlink.classList.add("btn-secondary");
+      nextlink.classList.add("btn-secondary")
+      nextlink.classList.add("mgl-story-btn");
       nextlink.setAttribute("data-scroll", "");
 
       if (prev != null) {
@@ -126,6 +129,7 @@ function createStory(map, dataUrl, id, theme, zoom) {
         }
         prevlink.classList.add("btn");
         prevlink.classList.add("btn-secondary");
+        prevlink.classList.add("mgl-story-btn");
         prevlink.setAttribute("data-scroll", "");
         prevlink.textContent = "<";
       }

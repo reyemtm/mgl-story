@@ -69,11 +69,11 @@
 
 .mgl-story > section > button {
   margin-top: 20px;
-  border: solid thin #121212;
+  border: none;
   background: transparent;
   border-radius: 2px;
   min-width: 60px;
-  display: none;
+  min-height: 40px;
 }
 
 .mgl-story > section > button:hover,
