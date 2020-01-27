@@ -14,7 +14,7 @@ var center = (!params.get("center")) ? [-82.10116, 39.32739] : [Number(params.ge
 
 var zoom = (!params.get("zoom")) ? 13.6 : params.get("zoom")
 
-var theme = (!params.get("theme")) ? "right" : params.get("theme")
+var theme = (!params.get("theme")) ? "left" : params.get("theme")
 
 /*
 THEMES

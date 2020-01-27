@@ -11,6 +11,8 @@
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
   "Droid Sans", "Helvetica Neue", sans-serif;
   width: 30%;
+  max-width: 520px;
+  min-width: 400px;
   /* margin-left: calc(67% - 60px); */
   overflow: auto;
   overflow-x: hidden;
@@ -29,6 +31,7 @@
   scroll-padding-top: 10px;
   scroll-padding-bottom: 100px;
 }
+
 .mgl-story::-webkit-scrollbar { 
   display: none; /* Chrome */
 } 
@@ -92,6 +95,8 @@
   .mgl-story {
     top: 60vh;
     width: 100%;
+    max-width: 100%;
+    min-width: unset;
     scroll-padding-top: 0px;
   }
   .mgl-story > section {
