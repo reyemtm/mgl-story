@@ -1,7 +1,7 @@
 # mgl-story
 ## Mapbox GL JS Story Map Template
 
-This map reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object of images. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title.
+This app reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object of images. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title. This app is based on the original Mapbox examples for scrolling to a location.
 
 ### Query Parameters
 
@@ -10,7 +10,7 @@ This map reads the points from a GeoJSON and creates a story map. It works on mo
 url, token, style, center, zoom, theme, sort
 */
 
-var url = (!params) ? "./story.json" : (!params.get("story")) ? "./story.json" : params.get("story") : 
+var url = (!params) ? "./story.json" : (!params.get("story")) ? "./story.json" : params.get("story");
 mapboxgl.accessToken = (!params.get("token")) ? 'my token will only work on this url' : params.get("token");
 var style = (!params.get("style")) ? 'mapbox://styles/mapbox/light-v10' : style;
 var center = (!params.get("center")) ? [-82.10116, 39.32739] : [Number(params.get("center").split(",")[0]),Number(params.get("center").split(",")[1])];
@@ -48,10 +48,15 @@ var sort = (!params.get("sort")) ? null : params.get("sort") // sort the geojson
 ### Current Mapbox style reference
 
 ``mapbox://styles/mapbox/light-v10``
+
 ``mapbox://styles/mapbox/dark-v10``
+
 ``mapbox://styles/mapbox/street-v11``
+
 ``mapbox://styles/mapbox/satellite-streets-v11``
+
 ``mapbox://styles/mapbox/outdoors-v11``
+
 ``mapbox://styles/mapbox/satellite-v9``
 
 I published this story map template a few weeks before the 'official' Mapbox Solutions template. Oh well...
