@@ -103,6 +103,10 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
         chapter.classList.add("active")
       }
 
+      var wrapper = document.createElement("div");
+      wrapper.classList.add("mgl-story-wrapper");
+      chapter.appendChild(wrapper);
+
       //IMAGES - EXPECTING AN ARRAY OR COMMA SEPARATED STRING
       var imgSource = (!p.images) ? null : p.images;
       // console.log(imgSource)
@@ -115,7 +119,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
           img.src = url;
           img.style.width = "100%";
           img.style.marginTop = "20px";
-          chapter.appendChild(img)
+          wrapper.appendChild(img)
         })
       }
 
@@ -124,13 +128,13 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       var title = document.createElement('h2');
       title.textContent = p.title;
       title.classList.add('story-title');
-      chapter.appendChild(title);
+      wrapper.appendChild(title);
 
       //BODY
       var body = document.createElement('div');
       body.classList.add('story-body');
       body.innerText = p.body;
-      chapter.appendChild(body);
+      wrapper.appendChild(body);
 
       //BUTTONS
       var nextlink = document.createElement('button');
@@ -170,8 +174,12 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
         }
       }
      
-      chapter.appendChild(prevlink);
-      chapter.appendChild(nextlink);
+      wrapper.appendChild(prevlink);
+      wrapper.appendChild(nextlink);
+
+      var scrollSnapFix = document.createElement("div");
+      scrollSnapFix.style.height = "20vh";
+      chapter.appendChild(scrollSnapFix)
 
       var div = document.getElementById(div);
       div.appendChild(chapter)
