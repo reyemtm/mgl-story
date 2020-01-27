@@ -1,7 +1,7 @@
 # mgl-story
 ## Mapbox GL JS Story Map Template
 
-This app reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object of images. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title. This app is based on the original Mapbox examples for scrolling to a location.
+This app reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object of images. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title. This app is based on the original Mapbox example for scrolling to a location.
 
 ### Query Parameters
 
