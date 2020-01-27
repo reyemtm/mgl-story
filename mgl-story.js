@@ -65,10 +65,12 @@ function createStory(map, dataUrl, id, theme, zoom) {
       var next = i + 1;
       var prev = i - 1;
       if (i === (chapters.length - 1)) {
-        next = 0;
+        // next = 0;
+        next = null
       }
       if (i === 0) {
-        prev = chapters.length - 1;
+        // prev = chapters.length - 1;
+        prev = null
       }
 
       createChapterList(id, chapters[i], i, next, prev);
@@ -92,50 +94,14 @@ function createStory(map, dataUrl, id, theme, zoom) {
     }
 
     function createChapterList(div, p, index, next, prev) {
+      console.log(prev, next)
       var chapter = document.createElement('section');
       chapter.id = "chapter" + index;
       chapter.classList.add("chapter");
+      
       if (index === 0) {
         chapter.classList.add("active")
       }
-      var title = document.createElement('h2');
-      title.textContent = p.title;
-      title.classList.add('story-title');
-      var body = document.createElement('div');
-      body.classList.add('story-body');
-      body.innerText = p.body;
-
-      var nextlink = document.createElement('button');
-      nextlink.onclick = function() {
-        window.location.hash = "#chapter" + next;
-        if (isElementOnScreen("chapter" + next)) {
-          setActiveChapter("chapter" + next);
-        }
-      }
-      nextlink.textContent = ">";
-      nextlink.classList.add("btn");
-      nextlink.classList.add("btn-secondary")
-      nextlink.classList.add("mgl-story-btn");
-      nextlink.setAttribute("data-scroll", "");
-
-      if (prev != null) {
-        nextlink.style.float = "right";
-        var prevlink = document.createElement('button');
-        prevlink.onclick = function() {
-          window.location.hash = "#chapter" + prev;
-          if (isElementOnScreen("chapter" + prev)) {
-            setActiveChapter("chapter" + prev);
-          }
-        }
-        prevlink.classList.add("btn");
-        prevlink.classList.add("btn-secondary");
-        prevlink.classList.add("mgl-story-btn");
-        prevlink.setAttribute("data-scroll", "");
-        prevlink.textContent = "<";
-      }
-
-      chapter.appendChild(title);
-      chapter.appendChild(body);
 
       //IMAGES - EXPECTING AN ARRAY OR COMMA SEPARATED STRING
       var imgSource = (!p.images) ? null : p.images;
@@ -152,10 +118,59 @@ function createStory(map, dataUrl, id, theme, zoom) {
           chapter.appendChild(img)
         })
       }
+
       
-      if (prev != null) {
-        chapter.appendChild(prevlink);
+      //TITLE
+      var title = document.createElement('h2');
+      title.textContent = p.title;
+      title.classList.add('story-title');
+      chapter.appendChild(title);
+
+      //BODY
+      var body = document.createElement('div');
+      body.classList.add('story-body');
+      body.innerText = p.body;
+      chapter.appendChild(body);
+
+      //BUTTONS
+      var nextlink = document.createElement('button');
+      nextlink.textContent = ">";
+      nextlink.classList.add("btn");
+      nextlink.classList.add("btn-secondary")
+      nextlink.classList.add("mgl-story-btn");
+      nextlink.setAttribute("data-scroll", "");
+      nextlink.style.float = "right";
+      if (!next) {
+        nextlink.style.opacity = 0;
+        nextlink.style.cursor = "inherit"
+      }else{
+        nextlink.onclick = function() {
+          window.location.hash = "#chapter" + next;
+          if (isElementOnScreen("chapter" + next)) {
+            setActiveChapter("chapter" + next);
+          }
+        }
       }
+
+      var prevlink = document.createElement('button');
+      prevlink.classList.add("btn");
+      prevlink.classList.add("btn-secondary");
+      prevlink.classList.add("mgl-story-btn");
+      prevlink.setAttribute("data-scroll", "");
+      prevlink.textContent = "<";
+      if (!prev && prev != 0) {
+        prevlink.style.opacity = 0;
+        prevlink.style.cursor = "inherit"     
+      }else{
+        prevlink.onclick = function() {
+          window.location.hash = "#chapter" + prev;
+          if (isElementOnScreen("chapter" + prev)) {
+            setActiveChapter("chapter" + prev);
+          }
+        }
+      }
+     
+      chapter.appendChild(prevlink);
       chapter.appendChild(nextlink);
 
       var div = document.getElementById(div);
