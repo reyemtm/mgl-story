@@ -50,5 +50,8 @@ var sort = (!params.get("sort")) ? null : params.get("sort") // sort the geojson
 ``mapbox://styles/mapbox/light-v10``
 ``mapbox://styles/mapbox/dark-v10``
 ``mapbox://styles/mapbox/street-v11``
+``mapbox://styles/mapbox/satellite-streets-v11``
+``mapbox://styles/mapbox/outdoors-v11``
+``mapbox://styles/mapbox/satellite-v9``
 
 I published this story map template a few weeks before the 'official' Mapbox Solutions template. Oh well...
