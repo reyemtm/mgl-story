@@ -8,7 +8,7 @@ var url = (!params) ? "./story.json" : (params && params.get("story")) ? params.
 
 mapboxgl.accessToken = (!params.get("token")) ? 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJjazV3dGF1NXkxejN0M2puNXR0dHl0bjl0In0.RArATVn7HIPmMCV373DHTw' : params.get("token");
 
-var style = (!params.get("style")) ? 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby' : style;
+var style = (!params.get("style")) ? 'mapbox://styles/mapbox/satellite-streets-v11' : style;
 
 var center = (!params.get("center")) ? [-82.10116, 39.32739] : [Number(params.get("center").split(",")[0]),Number(params.get("center").split(",")[1])];
 

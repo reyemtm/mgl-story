@@ -49,6 +49,8 @@ function createStory(map, dataUrl, id, theme, zoom) {
         p["images"] = p.image
       }
 
+      if (p.images && typeof(p.images) != "object") p.images = [p.images]
+
       chapters.push({
         title: p.title,
         body: story,
