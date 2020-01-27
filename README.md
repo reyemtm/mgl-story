@@ -1,13 +1,13 @@
 # mgl-story
 ## Mapbox GL JS Story Map Template
 
-This map reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title.
+This map reads the points from a GeoJSON and creates a story map. It works on mobile and desktop, and can have one or more images, with a field called ``image`` or ``images``. The images can be a string or an object of images. It would be nice to have multiple images turn into a slideshow but right now they just append to story before the title.
 
 ### Query Parameters
 
 ```JavaScript
 /*
-url, token, style, center, zoom, theme
+url, token, style, center, zoom, theme, sort
 */
 
 var url = (!params) ? "./story.json" : (!params.get("story")) ? "./story.json" : params.get("story") : 
@@ -16,6 +16,7 @@ var style = (!params.get("style")) ? 'mapbox://styles/mapbox/light-v10' : style;
 var center = (!params.get("center")) ? [-82.10116, 39.32739] : [Number(params.get("center").split(",")[0]),Number(params.get("center").split(",")[1])];
 var zoom = (!params.get("zoom")) ? 13.6 : params.get("zoom")
 var theme = (!params.get("theme")) ? "left" : params.get("theme")
+var sort = (!params.get("sort")) ? null : params.get("sort") // sort the geojson by a feature property before creating the story
 
 ```
 
@@ -45,17 +46,9 @@ var theme = (!params.get("theme")) ? "left" : params.get("theme")
 ```
 
 ### Current Mapbox style reference
-2020/01/27
 
 ``mapbox://styles/mapbox/light-v10``
 ``mapbox://styles/mapbox/dark-v10``
 ``mapbox://styles/mapbox/street-v11``
-``mapbox://styles/mapbox/satellite-streets-v11``
-``mapbox://styles/mapbox/outdoors-v11``
-``mapbox://styles/mapbox/satellite-v9``
-
-I will add more once I figure out the links to navigation and monochrome.
-
-### Notes
 
 I published this story map template a few weeks before the 'official' Mapbox Solutions template. Oh well...

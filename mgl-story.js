@@ -6,22 +6,17 @@
  * @param {element} id id of element where to create the story
  */
 
-function createStory(map, dataUrl, id, theme, zoom) {
+function createStory(map, dataUrl, id, theme, zoom, sort) {
   var mapZoom = (!zoom) ? 13.6 : zoom;
   var storyContainer = document.getElementById(id);
   storyContainer.classList.add("mgl-story")
 
   if (theme) {
     storyContainer.classList.add(theme);
-    console.log(map)
     map._container.classList.add(theme)
   }
 
   var activeChapterName = "chapter0";
-
-  /**
-   * main function
-   */
 
   fetch(dataUrl)
     .then(function (res) {
@@ -37,6 +32,12 @@ function createStory(map, dataUrl, id, theme, zoom) {
       center: geojson.features[0].geometry.coordinates,
       zoom: mapZoom
     })
+
+    if (sort) {
+      var features = geojson.features.slice()
+      features.sort(propSort(["id"]))
+      geojson.features = features.slice()
+    }
 
     var chapters = [];
     geojson.features.map(function (feature) {
@@ -82,9 +83,7 @@ function createStory(map, dataUrl, id, theme, zoom) {
       storyContainer.onscroll = function () {
         for (var i = 0; i < chapters.length; i++) {
           var chapterName = "chapter" + i;
-//           console.log(chapterName)
           if (isElementOnScreen(chapterName)) {
-//             console.log("active", chapterName)
             setActiveChapter(chapterName, i);
             break;
           }
@@ -96,7 +95,6 @@ function createStory(map, dataUrl, id, theme, zoom) {
     }
 
     function createChapterList(div, p, index, next, prev) {
-      console.log(prev, next)
       var chapter = document.createElement('section');
       chapter.id = "chapter" + index;
       chapter.classList.add("chapter");
@@ -227,4 +225,21 @@ function createStory(map, dataUrl, id, theme, zoom) {
 
 export {
   createStory
+}
+
+/*https://gis.stackexchange.com/questions/68369/how-do-i-sort-a-geojson-feature-collection-alphabetically-by-a-property-value/79732#79732/*/
+function propSort(props) {
+  if (!props instanceof Array) props = props.split(",");
+  return function sort(a, b) {
+    var p;
+    a = a.properties;
+    b = b.properties;
+    for (var i = 0; i < props.length; i++) {
+      p = props[i];
+      if (typeof a[p] === "undefined") return -1;
+      if (a[p] < b[p]) return -1;
+      if (a[p] > b[p]) return 1;
+    }
+    return 0;
+  };
 }

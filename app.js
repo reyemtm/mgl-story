@@ -16,6 +16,8 @@ var zoom = (!params.get("zoom")) ? 13.6 : params.get("zoom")
 
 var theme = (!params.get("theme")) ? "left" : params.get("theme")
 
+var sort = (!params.get("sort")) ? null : params.get("sort")
+
 /*
 THEMES
 right
@@ -26,18 +28,16 @@ offset-right
 maybe optional right-dark, etc.
 */
 
-console.log(zoom, center, style, theme, zoom)
-
 var map = new mapboxgl.Map({
   container: 'map', // container id
   style: style, // stylesheet location
   center: center, // starting position [lng, lat]
   zoom: zoom, // starting zoom
-  hash: true
+  hash: false
 });
 
 map.on("load", function() {
-  createStory(this, url, "story", theme, zoom)
+  createStory(this, url, "story", theme, zoom, sort)
 })
 
 map.on("click", function(e) {
