@@ -6,10 +6,16 @@
  * @param {element} id id of element where to create the story
  */
 
-function createStory(map, dataUrl, id) {
-
+function createStory(map, dataUrl, id, theme, zoom) {
+  var mapZoom = (!zoom) ? 13.6 : zoom;
   var storyContainer = document.getElementById(id);
   storyContainer.classList.add("mgl-story")
+
+  if (theme) {
+    storyContainer.classList.add(theme);
+    console.log(map)
+    map._container.classList.add(theme)
+  }
 
   var activeChapterName = "chapter0";
 
@@ -29,7 +35,7 @@ function createStory(map, dataUrl, id) {
 
     map.flyTo({
       center: geojson.features[0].geometry.coordinates,
-      zoom: 13.6
+      zoom: mapZoom
     })
 
     var chapters = [];

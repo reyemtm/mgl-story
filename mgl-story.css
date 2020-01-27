@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 70%;
+  width: 100%;
 }
 
 .mgl-story {
@@ -14,31 +14,56 @@
   /* margin-left: calc(67% - 60px); */
   overflow: auto;
   overflow-x: hidden;
-  background-color: #fff;
+  background-color: transparent;
   position: absolute;
   bottom: 0;
   right: 0;
   top: 0;
   border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
+  /* box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12); */
   z-index: 10;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+  scroll-padding-bottom: 100px;
 }
+.mgl-story::-webkit-scrollbar { 
+  display: none; /* Chrome */
+} 
+/*THEMES*/
+
+/* #map.left {
+  left: 30%
+} */
+
+.mgl-story.left {
+  right: unset;
+  /* left: 20px; */
+}
+/********/
+
 .mgl-story > section {
-  margin: 10px 20px 400px 20px;
+  margin: 20px 20px 100vh 20px;
   padding-top: 1px;
   transition: opacity 0.3s ease-in;
-}
-
-
-.mgl-story > section {
   opacity: 0.1;
+  background: rgba(255,255,255, 0.8);
+  padding: 1px 20px 30px;
+  border-radius: 3px;
+  scroll-snap-align: start;
 }
 
 .mgl-story > section.active {
   opacity: 1;
 }
 
-.mgl-story .story-body {
+.mgl-story:last-child {
+  margin: 20px;
+}
+
+.mgl-story > section .story-body {
   text-align: justify;
 }
 
@@ -58,25 +83,19 @@
   cursor: pointer;
 }
 
-.mgl-story {
-  scroll-snap-type: y proximity;
-}
-
-.mgl-story > section {
-  scroll-snap-align: start;
-}
-
 @media screen and (max-width: 960px) {
-  .mgl-story {
-    height: 40vh;
-    top: unset;
-    right: unset;
-    width: 100%
-  }
   #map {
-    /* margin-bottom: 40vh; */
     height: 60vh;
     bottom: unset;
     width: 100%;
+  }
+  .mgl-story {
+    top: 60vh;
+    width: 100%;
+    scroll-padding-top: 0px;
+  }
+  .mgl-story > section {
+    margin: 0px 20px 100vh 20px;
+    background: rgba(255,255,255)
   }
 }
