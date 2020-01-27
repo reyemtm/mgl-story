@@ -6,7 +6,7 @@ var params = new URLSearchParams(window.location.search);
 
 var url = (!params) ? "./story.json" : (params && params.get("story")) ? params.get("story") : "./story.json";
 
-mapboxgl.accessToken = (!params.get("token")) ? 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg' : params.get("token");
+mapboxgl.accessToken = (!params.get("token")) ? 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJjazV3dGF1NXkxejN0M2puNXR0dHl0bjl0In0.RArATVn7HIPmMCV373DHTw' : params.get("token");
 
 var style = (!params.get("style")) ? 'mapbox://styles/reyemtm/cjxf2ijea17wy1cp9omvl6oby' : style;
 
