@@ -46,7 +46,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       var p = feature.properties;
       var story = (!p.story) ? p.description : p.story;
 
-      if (p.image) {
+      if (p.image && !p.images) {
         p["images"] = p.image
       }else{
         p.images = null
