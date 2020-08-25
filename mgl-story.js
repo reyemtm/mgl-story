@@ -116,13 +116,14 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       if (imgSource) {
         var split = (Array.isArray(imgSource)) ? imgSource : imgSource.split(",");
         // console.log(split)
-        split.map(function(url) {
-          // console.log(url);
-          var img = document.createElement("img");
-          img.src = url;
-          img.style.width = "100%";
-          img.style.marginTop = "20px";
-          wrapper.appendChild(img)
+        split.map(function((url,i)) {
+          if (i === 0) {
+            var img = document.createElement("img");
+            img.src = url;
+            img.style.width = "100%";
+            img.style.marginTop = "20px";
+            wrapper.appendChild(img)
+          }
         })
       }
 
