@@ -116,7 +116,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       if (imgSource) {
         var split = (Array.isArray(imgSource)) ? imgSource : imgSource.split(",");
         // console.log(split)
-        split.map(function((url,i)) {
+        split.map(function(url,i) {
           if (i === 0) {
             var img = document.createElement("img");
             img.src = url;
