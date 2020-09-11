@@ -10,6 +10,8 @@ mapboxgl.accessToken = (!params.get("token")) ? 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJj
 
 var style = (!params.get("style")) ? 'mapbox://styles/mapbox/light-v10' : style;
 
+console.log(style)
+
 var center = (!params.get("center")) ? [-82.10116, 39.32739] : [Number(params.get("center").split(",")[0]),Number(params.get("center").split(",")[1])];
 
 var zoom = (!params.get("zoom")) ? 13.6 : params.get("zoom")
