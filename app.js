@@ -8,7 +8,7 @@ var url = (!params) ? "./story.json" : (params && params.get("story")) ? params.
 
 mapboxgl.accessToken = (!params.get("token")) ? 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJjazV3dGF1NXkxejN0M2puNXR0dHl0bjl0In0.RArATVn7HIPmMCV373DHTw' : params.get("token");
 
-var style = (!params.get("style")) ? 'mapbox://styles/mapbox/light-v10' : style;
+var style = (!params.get("style")) ? 'mapbox://styles/mapbox/light-v10' : params.get("style");
 
 console.log(style)
 
