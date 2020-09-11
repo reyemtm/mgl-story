@@ -137,9 +137,17 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       //BODY
       var body = document.createElement('div');
       body.classList.add('story-body');
-      body.innerText = p.body;
+      body.innerText = (!p.body) ? "" : p.body;
       wrapper.appendChild(body);
 
+      //LINK
+      var link = document.createElement('a');
+      link.href = (!p.link) ? "#" : p.link;
+      link.setAttribute(target, "_blank");
+      if (p.link) {
+        wrapper.appendChild(link)
+      }
+      
       //BUTTONS
       var nextlink = document.createElement('button');
       nextlink.textContent = ">";
