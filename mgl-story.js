@@ -138,15 +138,15 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       var body = document.createElement('div');
       body.classList.add('story-body');
       body.innerText = (!p.body) ? "" : p.body;
-      wrapper.appendChild(body);
-
+      
       //LINK
       var link = document.createElement('a');
       link.href = (!p.link) ? "#" : p.link;
-      link.setAttribute(target, "_blank");
+      link.setAttribute("target", "_blank");
       if (p.link) {
-        wrapper.appendChild(link)
+        body.appendChild(link)
       }
+      wrapper.appendChild(body);
       
       //BUTTONS
       var nextlink = document.createElement('button');
