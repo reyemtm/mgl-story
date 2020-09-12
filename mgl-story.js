@@ -147,6 +147,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       linkDiv.style.fontSize = "smaller";
       linkDiv.style.margin = "10px 0";
       var link = document.createElement('a');
+      link.classList = "btn";
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
 //       var linkButton = document.createElement('button');
