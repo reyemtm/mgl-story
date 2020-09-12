@@ -143,10 +143,14 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       
       
       //LINK
+      linkButton.style.width = "100%";
       var link = document.createElement('a');
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
-      link.innerText = "Learn More";
+      var linkButton = document.createElement('button');
+      linkButton.style.width = "100%";
+      linkButton.innerText = "Learn More";
+      link.appendChild(linkButton);
       if (p.link) {
         wrapper.appendChild(link);
       }
