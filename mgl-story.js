@@ -145,13 +145,15 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       //LINK
       var linkDiv = document.createElement("div")
       linkDiv.style.width = "100%";
+      linkDiv.style.fontSize = "smaller";
+      linkDiv.style.margin = "1rem 0 0";
       var link = document.createElement('a');
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
-      var linkButton = document.createElement('button');
-      linkButton.style.width = "100%";
-      linkButton.innerText = "Learn More";
-      link.appendChild(linkButton);
+//       var linkButton = document.createElement('button');
+//       linkButton.style.width = "100%";
+      link.innerText = "Learn More";
+//       link.appendChild(linkButton);
       linkDiv.appendChild(link);
       if (p.link) {
         wrapper.appendChild(linkDiv);
