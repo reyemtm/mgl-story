@@ -144,7 +144,8 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
       if (p.link) {
-        body.appendChild(link)
+        body.appendChild(link);
+        console.log(body)
       }
       wrapper.appendChild(body);
       
