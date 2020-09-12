@@ -45,3 +45,7 @@ map.on("load", function() {
 map.on("click", function(e) {
   console.log(e.lngLat)
 })
+
+map.on("zoomend", function() {
+  console.log(map.getZoom())
+});
