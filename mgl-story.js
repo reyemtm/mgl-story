@@ -58,6 +58,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       chapters.push({
         title: p.title,
         body: story,
+        link: (!p.link) ? null : p.link,
         center: feature.geometry.coordinates,
         bearing: (p.bearing != null) ? p.bearing : 0,
         pitch: (p.pitch != null) ? p.pitch : 0,
@@ -138,16 +139,17 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       var body = document.createElement('div');
       body.classList.add('story-body');
       body.innerText = (!p.body) ? "" : p.body;
+      wrapper.appendChild(body);
+      
       
       //LINK
       var link = document.createElement('a');
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
+      link.innerText = "Learn More";
       if (p.link) {
-        body.appendChild(link);
-        console.log(body)
+        wrapper.appendChild(link);
       }
-      wrapper.appendChild(body);
       
       //BUTTONS
       var nextlink = document.createElement('button');
