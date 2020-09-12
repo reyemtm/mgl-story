@@ -43,7 +43,8 @@ map.on("load", function() {
 })
 
 map.on("click", function(e) {
-  console.log(e.lngLat)
+  console.log(e.lngLat);
+  console.log(map.getZoom())
 })
 
 map.on("zoomend", function() {
