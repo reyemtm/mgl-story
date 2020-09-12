@@ -75,19 +75,20 @@
 }
 
 .mgl-story > section .mgl-story-wrapper a.btn {
-  color: black;
-  text-decoration: none;
   background: #00000000;
-  padding: 6px 12px;
-  border-radius: 16px;
-  font-size: smaller;
   border: solid 2px black;
+  border-radius: 16px;
+  color: black;
+  margin: 10px 0;
+  font-size: smaller;
+  padding: 6px 12px;
+  text-decoration: none;  
 }
 
 .mgl-story > section .mgl-story-wrapper a.btn:hover,
 .mgl-story > section .mgl-story-wrapper a.btn:focus {
   color: white;
-  backvround-color: black;
+  background-color: black;
 }
 
 .mgl-story > section .mgl-story-wrapper button {
