@@ -74,6 +74,22 @@
   text-align: justify;
 }
 
+.mgl-story > section .mgl-story-wrapper a.btn {
+  color: black;
+  text-decoration: none;
+  background: #00000000;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: smaller;
+  border: solid 2px black;
+}
+
+.mgl-story > section .mgl-story-wrapper a.btn:hover,
+.mgl-story > section .mgl-story-wrapper a.btn:focus {
+  color: white;
+  backvround-color: black;
+}
+
 .mgl-story > section .mgl-story-wrapper button {
   margin-top: 20px;
   border: solid thin lightgray;
