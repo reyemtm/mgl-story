@@ -76,7 +76,7 @@
 
 .mgl-story > section .mgl-story-wrapper button {
   margin-top: 20px;
-  border: none;
+  border: solid thin lightgray;
   background: transparent;
   border-radius: 2px;
   min-width: 60px;
