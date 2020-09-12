@@ -143,7 +143,8 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       
       
       //LINK
-      linkButton.style.width = "100%";
+      var linkDiv = document.createElement("div")
+      linkDiv.style.width = "100%";
       var link = document.createElement('a');
       link.href = (!p.link) ? "#" : p.link;
       link.setAttribute("target", "_blank");
@@ -151,8 +152,9 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
       linkButton.style.width = "100%";
       linkButton.innerText = "Learn More";
       link.appendChild(linkButton);
+      linkDiv.appendChild(link);
       if (p.link) {
-        wrapper.appendChild(link);
+        wrapper.appendChild(linkDiv);
       }
       
       //BUTTONS
