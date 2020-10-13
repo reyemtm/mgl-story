@@ -50,7 +50,7 @@ function createStory(map, dataUrl, id, theme, zoom, sort) {
         p["images"] = p.image
       }
 
-      if (p.images && p.images.split(",")) p.images = p.images.split(",")
+      if (p.images && p.images.indexOf(",") > -1) p.images = p.images.split(",")
           
       if (p.images && typeof(p.images) != "object") p.images = [p.images]
       
