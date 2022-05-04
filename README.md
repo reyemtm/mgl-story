@@ -44,6 +44,9 @@ var sort = (!params.get("sort")) ? null : params.get("sort") // sort the geojson
 }
 
 ```
+## Other Cool Story Maps
+
+- https://mappingmay4.kent.edu/
 
 ### Current Mapbox style reference
 
