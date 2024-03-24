@@ -62,4 +62,4 @@ var sort = (!params.get("sort")) ? null : params.get("sort") // sort the geojson
 
 ``mapbox://styles/mapbox/satellite-v9``
 
-I published this story map template a few weeks before the 'official' Mapbox Solutions template. Oh well...
+I published this story map template a few weeks before the 'official' Mapbox Solutions template. That template is more fully-featured but is also more complicated.
